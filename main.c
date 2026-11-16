@@ -313,7 +313,7 @@ static void Audio_Reproducir(Sonido sonido)
         case SON_INCORRECTO:  audioMelodia = musicaIncorrecto; break;
         case SON_GUARDANDO:
             audioMelodia = musicaGuardando;
-            audioRepetir = 1u;
+            audioRepetir = 0u;
             break;
         case SON_GUARDADO:    audioMelodia = musicaGuardado; break;
         case SON_NO_GUARDADO:audioMelodia = musicaNoGuardado; break;
@@ -398,9 +398,9 @@ int main(void)
   // DAC PA4 y sonido de inicio (Nucleo 1 encendida).
   Audio_Iniciar();
   Audio_Reproducir(SON_LISTO);
-  
 
-  
+
+
 
   /* USER CODE END 2 */
 
